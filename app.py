@@ -151,6 +151,7 @@ doc_container = st.container()
 with doc_container:
     docs = upload_and_process_pdf()
     model = create_doc_gpt(docs)
+    del docs
     st.write('---')
 
 if 'response' not in st.session_state:
